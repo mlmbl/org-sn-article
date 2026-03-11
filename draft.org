@@ -1,0 +1,58 @@
+#+TITLE: 論文タイトル
+#+AUTHOR: 著者名
+#+DATE:
+#+LANGUAGE: en
+
+#+LATEX_CLASS: sn-jnl
+#+LATEX_CLASS_OPTIONS: [pdflatex,sn-basic]
+
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \usepackage{multirow}
+#+LATEX_HEADER: \usepackage{amsmath,amssymb,amsfonts}
+#+LATEX_HEADER: \usepackage{booktabs}
+
+#+LATEX_HEADER: \author*[1]{\fnm{First} \sur{Author}}\email{email@example.com}
+#+LATEX_HEADER: \author[1]{\fnm{Second} \sur{Author}}\email{email@example.com}
+#+LATEX_HEADER: \affil*[1]{\orgname{University}, \orgdiv{Department}, \city{City}, \country{Country}}
+
+#+OPTIONS: title:nil author:nil toc:nil num:t ^:{}
+#+CITE_EXPORT: natbib sn-basic
+
+* 作業メモ                                                         :noexport:
+
+** アウトライン案
+
+** 思考過程
+
+** 参考メモ
+
+* 本文
+
+#+BEGIN_EXPORT latex
+\title{論文タイトル}
+\abstract{}
+\maketitle
+#+END_EXPORT
+
+** Introduction
+
+** Methods
+
+** Results
+
+** Discussion
+
+** Acknowledgements
+
+** Declarations
+
+#+BEGIN_EXPORT latex
+\begin{declarations}
+\funding{The authors did not receive support from any organization for the submitted work.}
+\competingInterests{The authors have no competing interests to declare.}
+\ethics{All procedures involving animals were conducted in accordance with the guidelines of ...}
+\end{declarations}
+#+END_EXPORT
+
+#+PRINT_BIBLIOGRAPHY:
+

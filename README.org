@@ -1,0 +1,62 @@
+* Primates 論文テンプレート
+
+Org-mode で [[https://www.springer.com/journal/10329][Primates]] に投稿する論文を執筆するためのテンプレートです。
+
+** Quickstart
+
+1. このリポジトリをテンプレートとして新規リポジトリを作成
+2. ローカルに clone
+3. [[https://www.springernature.com/gp/authors/campaigns/latex-author-support/see-where-our-services-will-take-you/18782940][Springer Nature LaTeX テンプレート]] をダウンロードし、=sn-template/= に展開
+4. =README-sample.org= を参考に =README.org= を書き換え
+5. =paper.org= を編集して執筆開始
+
+** ファイル構成
+
+| ファイル             | 説明                                                          |
+|----------------------+---------------------------------------------------------------|
+| =draft.org=            | 論文本文のテンプレート                                        |
+| =references.bib=       | 参考文献                                                      |
+| =.dir-locals.el=       | Emacs のプロジェクト設定                                      |
+| =.latexmkrc=           | LaTeX ビルド設定 (natbib + sn-basic.bst)                      |
+| =README-sample.org=    | プロジェクト用 README のテンプレート                          |
+| =sources/=             | 図・画像・その他素材                                          |
+| =sn-article-template/= | Springer Nature テンプレート（要ダウンロード・gitignore済み） |
+
+** Springer Nature テンプレートのセットアップ
+
+=sn-template/= は =.gitignore= に含まれています。以下の手順で手動でセットアップしてください：
+
+1. [[https://www.springernature.com/gp/authors/campaigns/latex-author-support/see-where-our-services-will-take-you/18782940][Springer Nature LaTeX テンプレート]] をダウンロード
+2. ZIP を展開し、中身を =sn-template/= に配置
+
+展開後の構成：
+
+#+begin_src
+sn-template/
+├── sn-jnl.cls
+└── bst/
+    ├── sn-basic.bst
+    └── ...
+#+end_src
+
+** Emacs 設定
+
+=.dir-locals.el= がプロジェクト固有の設定を自動で適用します。はじめて org ファイルを開いたときに Emacs がローカル変数の適用を確認するので、=!= で答えてください。
+
+** 参考文献スタイル
+
+Primates の参考文献スタイルは =sn-basic= (Author-Year) です。=paper.org= に以下が設定されています：
+
+#+begin_src org
+,#+CITE_EXPORT: natbib sn-basic
+#+end_src
+
+本文中の引用は org-cite で記述します：
+
+#+begin_src org
+[cite:@authorYYYY]
+#+end_src
+
+** License
+
+MIT
