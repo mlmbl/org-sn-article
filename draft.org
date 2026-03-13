@@ -6,17 +6,30 @@
 #+LATEX_CLASS: sn-jnl
 #+LATEX_CLASS_OPTIONS: [pdflatex,sn-basic]
 
-#+LATEX_HEADER: \usepackage{graphicx}
-#+LATEX_HEADER: \usepackage{multirow}
-#+LATEX_HEADER: \usepackage{amsmath,amssymb,amsfonts}
-#+LATEX_HEADER: \usepackage{booktabs}
-
-#+LATEX_HEADER: \author*[1]{\fnm{First} \sur{Author}}\email{email@example.com}
-#+LATEX_HEADER: \author[1]{\fnm{Second} \sur{Author}}\email{email@example.com}
-#+LATEX_HEADER: \affil*[1]{\orgname{University}, \orgdiv{Department}, \city{City}, \country{Country}}
 
 #+OPTIONS: title:nil author:nil toc:nil num:t ^:{}
 #+CITE_EXPORT: natbib sn-basic
+
+#+BEGIN_EXPORT latex
+\title{}
+
+%%% if no e-mail address, use \nomail instead of \email{}
+\author*[1]{\fnm{} \sur{}}\email{}
+\author[2]{\fnm{} \sur{}}\email{}
+
+%%% Available tags:
+%%% \orgname{}, \orgdiv{}, \orgaddress{}, \street{}, 
+%%% \city{}, \state{}, \postcode{}, \country
+\affil*[1]{}
+\affil[2]{}
+
+\abstract{}
+
+\keywords{}
+
+\maketitle
+#+END_EXPORT
+
 
 * 作業メモ                                                         :noexport:
 
@@ -26,33 +39,18 @@
 
 ** 参考メモ
 
-* 本文
 
-#+BEGIN_EXPORT latex
-\title{論文タイトル}
-\abstract{}
-\maketitle
-#+END_EXPORT
+* Introduction
 
-** Introduction
+* Methods
 
-** Methods
+* Results
 
-** Results
+* Discussion
 
-** Discussion
+* Acknowledgements
 
-** Acknowledgements
-
-** Declarations
-
-#+BEGIN_EXPORT latex
-\begin{declarations}
-\funding{The authors did not receive support from any organization for the submitted work.}
-\competingInterests{The authors have no competing interests to declare.}
-\ethics{All procedures involving animals were conducted in accordance with the guidelines of ...}
-\end{declarations}
-#+END_EXPORT
+* Declarations
 
 #+PRINT_BIBLIOGRAPHY:
 
